@@ -9,7 +9,6 @@ var level = 0;
 
 $(document).keypress(function() {
   if (!started) {
-    $("h1").text("Level " + level);
     nextSequence();
     started = true;
   }
@@ -83,4 +82,5 @@ function startOver() {
   level = 0;
   started = false;
   gamePattern = [];
+  
 }
