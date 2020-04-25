@@ -9,7 +9,7 @@ var level = 0;
 
 $(document).keypress(function() {
   if (!started) {
-    $("#level-title").text("Level " + level);
+    $("h1").text("Level " + level);
     nextSequence();
     started = true;
   }
@@ -47,7 +47,7 @@ function checkAnswer(currentLevel) {
       setTimeout(function () {
         $("body").removeClass("game-over");
       }, 200);
-      $("#level-title").text("Game Over, Press Any Key to Restart");
+      $("h1").text("Game Over, Press Any Key to Restart");
       startOver();
     }
 
@@ -57,7 +57,7 @@ function nextSequence() {
 
   userClickedPattern = [];
   level++;
-  $("#level-title").text("Level " + level);
+  $("h1").text("Level " + level);
 
   var randomNumber = Math.floor(Math.random() * 4);
   var randomChosenColour = buttonColours[randomNumber];
